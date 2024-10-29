@@ -9,7 +9,6 @@ colorscheme molokai
 
 
 call plug#begin('~/.config/vim/plugins')
-
 	Plug 'kaarmu/typst.vim'
 	Plug 'itchyny/lightline.vim'
 	Plug 'dmerejkowsky/vim-ale'
@@ -35,15 +34,17 @@ let g:lightline.tabline = {
     \ 'right': [ [ 'close' ] ] }
 
 
-" Enable autocompletion
+" enable autocompletion
 set completeopt=menu,menuone,noselect
 
+" set typst pdf viewer
 let g:typst_pdf_viewer='okular'
 
 " indent with one tab only
 set cino=(0
 set shiftwidth=4
 
+" ale linters
 let g:ale_linters = {
 	\ 'csh': ['shell'],
 	\ 'c': ['gcc'],
